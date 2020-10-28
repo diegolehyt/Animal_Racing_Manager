@@ -1,0 +1,130 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="navBar" style="position: absolute; height: 60px; width: 939.3334px; top: 0; left: 1.333333px;">
+        <Style src="Factory.uss" />
+        <ui:Label text="Gold:" display-tooltip-when-elided="True" name="goldLabel" style="position: absolute; top: 8px; left: 506.6667px;" />
+        <ui:Label text="0" display-tooltip-when-elided="True" name="goldValue" style="position: absolute; top: 7px; left: 547px;" />
+        <uie:ProgressBar title="Gold" low-value="25" name="GoldBar" high-value="50" style="height: 24.33333px; width: 130px; position: absolute; top: 27px; left: 501.3333px; color: rgba(255, 255, 255, 255);" />
+        <ui:Label text="Fame:" display-tooltip-when-elided="True" name="fameLabel" style="position: absolute; top: 7px; left: 596px;" />
+        <ui:Label text="0" display-tooltip-when-elided="True" name="fameValue" style="position: absolute; top: 8px; left: 640px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="banner" style="position: absolute; width: 327.8px; height: 95px; top: 2.4px; left: 141.6px; background-image: url(&apos;/Assets/Images/Title.png&apos;);">
+        <Style src="Factory.uss" />
+        <ui:Label text="Lv 3" display-tooltip-when-elided="True" name="LV" style="position: absolute; top: 47px; left: 248px; -unity-font-style: bold; color: rgb(255, 231, 0); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(255, 157, 0); border-right-color: rgb(255, 157, 0); border-top-color: rgb(255, 157, 0); border-bottom-color: rgb(255, 157, 0); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;" />
+        <ui:Label text="Factory " display-tooltip-when-elided="true" name="title" style="position: absolute; top: 51.4px; left: 115.8px; height: 28.2px; width: 95.8px; font-size: 25px; -unity-font-style: bold-and-italic; color: rgb(255, 255, 255);" />
+    </ui:VisualElement>
+    <ui:VisualElement name="container" style="width: 532.2px; position: absolute; top: 121.4px; left: 36.6px; height: 425px;">
+        <Style src="Factory.uss" />
+        <ui:VisualElement name="productionLine1" style="height: 80px; background-image: url(&apos;/Assets/Images/wooden-texture-cartoon.png&apos;); margin-bottom: 5px; width: 80%; margin-left: 10%; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+            <ui:Button text="Collect" display-tooltip-when-elided="True" name="collect1" style="position: absolute; top: 50px; left: 280px; display: none;" />
+            <ui:Label text="0" display-tooltip-when-elided="True" name="productionValue1" style="position: absolute; top: 49px; left: 233px;" />
+            <ui:Label text="Production:" display-tooltip-when-elided="True" name="productionLabel1" style="position: absolute; top: 49px; left: 164px; width: 69px;" />
+            <ui:Label text="Lv 1" display-tooltip-when-elided="True" name="LV" style="position: absolute; top: 7px; left: 165px; -unity-font-style: bold; color: rgb(255, 231, 0); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(255, 157, 0); border-right-color: rgb(255, 157, 0); border-top-color: rgb(255, 157, 0); border-bottom-color: rgb(255, 157, 0); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;" />
+            <ui:VisualElement style="height: 51px; width: 55px; background-image: url(&apos;/Assets/Images/snail.jpg&apos;); position: absolute; top: 14px; left: 12px; border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; border-left-color: rgb(255, 190, 0); border-right-color: rgb(255, 190, 0); border-top-color: rgb(255, 190, 0); border-bottom-color: rgb(255, 190, 0); border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px;" />
+            <ui:Label text="Production Speed: 10 Snail/hr" display-tooltip-when-elided="True" style="position: absolute; top: 31.2px; left: 161px; width: 178.2px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+            <ui:Button text="Upgrade&#10;20/hr" display-tooltip-when-elided="True" class="green-button" style="position: absolute; top: 13px; left: 347.2px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+            <ui:Foldout text="Type of food" value="true" focusable="false" usage-hints="DynamicTransform" tabindex="2" name="dropDown" style="position: absolute; top: -3.4px; left: 59.8px; color: rgb(255, 255, 255); opacity: 1; overflow: visible; display: none;">
+                <ui:VisualElement name="dropContainer" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71); border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-left-color: rgb(7, 7, 7); border-right-color: rgb(7, 7, 7); border-top-color: rgb(7, 7, 7); border-bottom-color: rgb(7, 7, 7);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px; background-color: rgb(0, 84, 214); -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="dropContainer" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(209, 209, 209);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="dropContainer" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(207, 187, 34);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="dropContainer" tabindex="10" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+            </ui:Foldout>
+        </ui:VisualElement>
+        <ui:VisualElement name="productionLine4" style="height: 80px; background-image: url(&apos;/Assets/Images/wooden-texture-cartoon.png&apos;); margin-bottom: 5px; width: 80%; margin-left: 10%; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+            <ui:Foldout text="Type of food" value="true" focusable="false" usage-hints="DynamicTransform" tabindex="2" name="dropDown" style="position: absolute; top: -3.4px; left: 59.8px; color: rgb(255, 255, 255); opacity: 1; overflow: visible; display: none;">
+                <ui:VisualElement name="dropContainer" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="dropContainer" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="dropContainer" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="dropContainer" tabindex="10" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+            </ui:Foldout>
+            <ui:VisualElement style="height: 51px; width: 55px; background-image: url(&apos;/Assets/Images/bunny.jpg&apos;); position: absolute; top: 14px; left: 12px; border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; border-left-color: rgb(255, 190, 0); border-right-color: rgb(255, 190, 0); border-top-color: rgb(255, 190, 0); border-bottom-color: rgb(255, 190, 0); border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px;" />
+            <ui:Label text="Production Speed: 10 Snail/hr" display-tooltip-when-elided="True" style="position: absolute; top: 31.2px; left: 161px; width: 178.2px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+            <ui:Button text="Upgrade&#10;20/hr" display-tooltip-when-elided="True" class="green-button" style="position: absolute; top: 13px; left: 347.2px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+            <ui:Label text="Lv 2" display-tooltip-when-elided="True" name="LV" style="position: absolute; top: 7px; left: 165px; -unity-font-style: bold; color: rgb(255, 231, 0); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(255, 157, 0); border-right-color: rgb(255, 157, 0); border-top-color: rgb(255, 157, 0); border-bottom-color: rgb(255, 157, 0); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="productionLine3" style="height: 80px; background-image: url(&apos;/Assets/Images/wooden-texture-cartoon.png&apos;); margin-bottom: 5px; width: 80%; margin-left: 10%; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+            <ui:Foldout text="Type of food" value="true" focusable="false" usage-hints="DynamicTransform" tabindex="2" name="dropDown" style="position: absolute; top: -3.4px; left: 59.8px; color: rgb(255, 255, 255); opacity: 1; overflow: visible; display: none;">
+                <ui:VisualElement name="dropContainer" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="dropContainer" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="dropContainer" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="dropContainer" tabindex="10" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+            </ui:Foldout>
+            <ui:VisualElement style="height: 51px; width: 55px; background-image: url(&apos;/Assets/Images/tigre.jpg&apos;); position: absolute; top: 14px; left: 12px; border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; border-left-color: rgb(255, 190, 0); border-right-color: rgb(255, 190, 0); border-top-color: rgb(255, 190, 0); border-bottom-color: rgb(255, 190, 0); border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px;" />
+            <ui:Label text="Production Speed: 10 Snail/hr" display-tooltip-when-elided="True" style="position: absolute; top: 31.2px; left: 161px; width: 178.2px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+            <ui:Button text="Upgrade&#10;20/hr" display-tooltip-when-elided="True" class="green-button" style="position: absolute; top: 13px; left: 347.2px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+            <ui:Label text="Lv 3" display-tooltip-when-elided="True" name="LV" style="position: absolute; top: 6px; left: 165px; -unity-font-style: bold; color: rgb(255, 231, 0); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(255, 157, 0); border-right-color: rgb(255, 157, 0); border-top-color: rgb(255, 157, 0); border-bottom-color: rgb(255, 157, 0); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="productionLine2" style="height: 80px; background-image: url(&apos;/Assets/Images/wooden-texture-cartoon.png&apos;); margin-bottom: 5px; width: 80%; margin-left: 10%; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; display: none;">
+            <ui:Foldout text="Type of food" value="true" focusable="false" usage-hints="DynamicTransform" tabindex="2" name="dropDown" style="position: absolute; top: -3.4px; left: 59.8px; color: rgb(255, 255, 255); opacity: 1; overflow: visible;">
+                <ui:VisualElement name="dropContainer" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="dropContainer" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="dropContainer" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="dropContainer" tabindex="10" style="margin-bottom: 5px;">
+                    <ui:VisualElement style="width: 20px; height: 18px; background-color: rgb(34, 207, 71);" />
+                    <ui:Button text="+" display-tooltip-when-elided="True" style="position: absolute; top: -1px; left: 47px; width: 24px;" />
+                </ui:VisualElement>
+            </ui:Foldout>
+            <ui:VisualElement style="height: 51px; width: 55px; background-image: url(&apos;/Assets/Images/snail.jpg&apos;); position: absolute; top: 14px; left: 12px; border-left-width: 4px; border-right-width: 4px; border-top-width: 4px; border-bottom-width: 4px; border-left-color: rgb(255, 190, 0); border-right-color: rgb(255, 190, 0); border-top-color: rgb(255, 190, 0); border-bottom-color: rgb(255, 190, 0); border-top-left-radius: 4px; border-bottom-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px;" />
+            <ui:Label text="Production Speed: 10 Snail/hr" display-tooltip-when-elided="True" style="position: absolute; top: 31.2px; left: 161px; width: 178.2px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+            <ui:Button text="Upgrade&#10;20/hr" display-tooltip-when-elided="True" class="green-button" style="position: absolute; top: 13px; left: 347.2px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+            <ui:Label text="Lv 1" display-tooltip-when-elided="True" name="LV" style="position: absolute; top: 6px; left: 165px; -unity-font-style: bold; color: rgb(255, 231, 0); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(255, 157, 0); border-right-color: rgb(255, 157, 0); border-top-color: rgb(255, 157, 0); border-bottom-color: rgb(255, 157, 0); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="addLine2" style="height: 88.2px; background-image: url(&apos;/Assets/Images/wooden-texture-cartoon.png&apos;); -unity-background-image-tint-color: rgb(180, 180, 180); width: 425.4px; margin-left: 10%; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+            <ui:Label text="Add new Line of Production" display-tooltip-when-elided="True" style="position: absolute; top: 2px; left: 138.8px; bottom: 62px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+            <ui:Button text="+" display-tooltip-when-elided="True" name="boton" style="position: absolute; top: 20px; left: 180.8px; height: 49px; width: 60px; font-size: 50px; background-image: url(&apos;/Assets/Images/greenButton.png&apos;);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Storage">
+            <ui:Label text="Storage" display-tooltip-when-elided="false" name="storageLabel" style="position: absolute; top: 29px; left: 338px;" />
+            <ui:Label text="0" display-tooltip-when-elided="True" name="storageValue" style="position: absolute; top: 31px; left: 414px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="test" style="display: none;">
+        <Style src="Factory.uss" />
+        <ui:Label text="DIEGO" name="nombre" />
+        <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" text="filler text" />
+    </ui:VisualElement>
+</ui:UXML>
