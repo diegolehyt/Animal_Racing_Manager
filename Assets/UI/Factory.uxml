@@ -3,7 +3,7 @@
         <Style src="Factory.uss" />
         <ui:Label text="Gold:" display-tooltip-when-elided="True" name="goldLabel" style="position: absolute; top: 8px; left: 506.6667px;" />
         <ui:Label text="0" display-tooltip-when-elided="True" name="goldValue" style="position: absolute; top: 7px; left: 547px;" />
-        <uie:ProgressBar title="Gold" low-value="25" name="GoldBar" high-value="50" style="height: 24.33333px; width: 130px; position: absolute; top: 27px; left: 501.3333px; color: rgba(255, 255, 255, 255);" />
+        <uie:ProgressBar title="Gold" low-value="25" name="GoldBar" high-value="50" style="height: 24.33333px; width: 130px; position: absolute; top: 27px; left: 501.3333px; color: rgb(255, 255, 255);" />
         <ui:Label text="Fame:" display-tooltip-when-elided="True" name="fameLabel" style="position: absolute; top: 7px; left: 596px;" />
         <ui:Label text="0" display-tooltip-when-elided="True" name="fameValue" style="position: absolute; top: 8px; left: 640px;" />
     </ui:VisualElement>
@@ -126,5 +126,9 @@
         <Style src="Factory.uss" />
         <ui:Label text="DIEGO" name="nombre" />
         <ui:TextField picking-mode="Ignore" label="Text Field" value="filler text" text="filler text" />
+    </ui:VisualElement>
+    <ui:VisualElement style="position: absolute; top: 135px; left: 577.3333px; height: 293.3333px; width: 294.6667px;">
+        <Style src="Factory.uss" />
+        <ui:VisualElement style="height: 282.6667px; background-image: url(&apos;/Assets/Images/factory.png&apos;); width: 333.6667px;" />
     </ui:VisualElement>
 </ui:UXML>

@@ -114,6 +114,11 @@ public class Factory : MonoBehaviour
             productionValue1.text = productionValueInt1.ToString();
             collectBtn1.style.display = DisplayStyle.Flex;
         }
+
+        else if (productionValueInt1 > 100)
+        {
+            return;
+        }
         else
         {
             productionValue1.text = productionValueInt1.ToString();
