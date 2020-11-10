@@ -36,9 +36,26 @@ public class Factory : MonoBehaviour
 
             var collectBtn1 = root.Q<Button>("collect1");
 
+            // close window button
+            var closeFactoryBtn1 = root.Q<Button>("closeFactoryBtn1");
+            var openFactoryBtn1 = root.Q<Button>("openFactoryBtn1");
+
             if (collectBtn1 != null)
             {
                 collectBtn1.clickable.clicked += CollectLine1;
+                collectBtn1.clickable.clicked += CollectLine2;
+            }
+
+            if (closeFactoryBtn1 != null)
+            {
+                closeFactoryBtn1.clickable.clicked += CloseFactory1;
+                
+            }
+
+            if (openFactoryBtn1 != null)
+            {
+                openFactoryBtn1.clickable.clicked += OpenFactory1;
+
             }
 
             if (boton != null)
@@ -52,6 +69,7 @@ public class Factory : MonoBehaviour
             InvokeRepeating("GoldUp", 1f, 1f);
 
             InvokeRepeating("ProductionLineUp1", 1f, 1f);
+            InvokeRepeating("ProductionLineUp2", 1f, 1f);
         }
         return null;
     }
@@ -90,7 +108,27 @@ public class Factory : MonoBehaviour
         storageValue.text = storageValueInt.ToString();
         productionValue1.text = "0";
 
-        collectBtn1.style.display = DisplayStyle.None;
+        // collectBtn1.style.display = DisplayStyle.None;
+    }
+
+    private void CollectLine2()
+    {
+        var root = panelRend.visualTree;
+
+        // Elements
+        var collectBtn1 = root.Q<Button>("collect1");
+        var productionValue2 = root.Q<Label>("productionValue2");
+        var storageValue = root.Q<Label>("storageValue");
+        var storageValueOut = root.Q<Label>("storageValueOut");
+
+        // state Vars
+        var storageValueInt = int.Parse(productionValue2.text) + int.Parse(storageValue.text);
+
+        storageValue.text = storageValueInt.ToString();
+        storageValueOut.text = storageValueInt.ToString();
+        productionValue2.text = "0";
+
+        // collectBtn1.style.display = DisplayStyle.None;
     }
 
     // ------------------------------   Progress Functions   -------------------------------
@@ -112,13 +150,16 @@ public class Factory : MonoBehaviour
         {
             // productionValue1.text = "FULL " + productionValueInt1.ToString();
             productionValue1.text = productionValueInt1.ToString();
-            collectBtn1.style.display = DisplayStyle.Flex;
+            // collectBtn1.style.display = DisplayStyle.Flex;
+
         }
 
         else if (productionValueInt1 > 100)
         {
+            // stop collecting at LIMIT
             return;
         }
+
         else
         {
             productionValue1.text = productionValueInt1.ToString();
@@ -127,7 +168,82 @@ public class Factory : MonoBehaviour
 
     }
 
-    // Progress Line - 1 production
+    void ProductionLineUp2()
+    {
+        // DOM
+        var root = panelRend.visualTree;
+
+        // Elements
+        // var collectBtn2 = root.Q<Button>("collect2");
+
+     
+        var productionValue2 = root.Q<Label>("productionValue2");
+
+        // take out
+        var productionValue1 = root.Q<Label>("productionValue1");
+        var storageValOut1 = root.Q<Label>("storageValOut1");
+        var storageValOutInt1 = int.Parse(storageValOut1.text);
+
+        // state Vars
+        var productionValueInt2 = int.Parse(productionValue2.text) + 10;
+
+        //take out
+        var productionValueInt1 = int.Parse(productionValue1.text);
+
+        // if (storageValOutInt1 == 200)
+        if (productionValueInt2 == 100)
+        {
+            // productionValue1.text = "FULL " + productionValueInt1.ToString();
+            productionValue2.text = productionValueInt2.ToString();
+            // collectBtn2.style.display = DisplayStyle.Flex;
+        }
+
+        else if (productionValueInt2 > 100)
+        {
+            // stop collecting at LIMIT
+            return;
+        }
+
+        else
+        {
+            productionValue2.text = productionValueInt2.ToString();
+
+            // take out +20
+            var storageSum = productionValueInt1 + productionValueInt2 + 20;
+            storageValOut1.text = storageSum.ToString();
+            // Debug.Log(goldValueInt);
+        }
+
+    }
+    // Open Factory 1
+    void OpenFactory1()
+    {
+        // DOM
+        var root = panelRend.visualTree;
+
+        // Elements
+        var factoryPage1 = root.Q<VisualElement>("factoryPage1");
+        var factoryObj1 = root.Q<VisualElement>("factoryObj1");
+
+        // it hides the factory 1 window
+        factoryPage1.style.display = DisplayStyle.Flex;
+        factoryObj1.style.display = DisplayStyle.None;
+    }
+
+    // Close factory 1
+    void CloseFactory1()
+    {
+        // DOM
+        var root = panelRend.visualTree;
+
+        // Elements
+        var factoryPage1 = root.Q<VisualElement>("factoryPage1");
+        var factoryObj1 = root.Q<VisualElement>("factoryObj1");
+
+        // it hides the factory 1 window
+        factoryPage1.style.display = DisplayStyle.None;
+        factoryObj1.style.display = DisplayStyle.Flex;
+    }
 
     void GoldUp()
     {
