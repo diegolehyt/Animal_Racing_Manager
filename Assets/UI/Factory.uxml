@@ -1,18 +1,21 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
-    <ui:VisualElement name="navBar" style="position: absolute; height: 60px; width: 1275px; top: 0; left: 1.333333px;">
+    <ui:VisualElement name="navBar" style="position: absolute; height: 60px; width: 1275px; top: -1px; left: 1px;">
         <Style src="Factory.uss" />
-        <ui:Label text="Gold:" display-tooltip-when-elided="True" name="goldLabel" style="position: absolute; top: 6px; left: 231px;" />
-        <ui:Label text="0" display-tooltip-when-elided="True" name="goldValue" style="position: absolute; top: 7px; left: 272px;" />
-        <ui:Label text="Fame:" display-tooltip-when-elided="True" name="fameLabel" style="position: absolute; top: 6px; left: 80px;" />
-        <ui:Label text="0" display-tooltip-when-elided="True" name="fameValue" style="position: absolute; top: 7px; left: 122px;" />
-        <ui:Label text="0" display-tooltip-when-elided="True" name="storageValueOut" style="position: absolute; top: 6px; left: 1224px; -unity-font-style: bold; color: rgb(0, 0, 0);" />
-        <ui:Label text="Warehouse:" display-tooltip-when-elided="True" name="WarehouseLabel" style="position: absolute; top: 6px; left: 1148px; -unity-font-style: bold; color: rgba(0, 0, 0, 255);" />
+        <ui:VisualElement style="position: absolute; height: 32.6px; width: 31.8px; top: 13px; left: 194px; background-image: url(&apos;/Assets/DailyRewards/Examples/Sprites/Coins.png&apos;);" />
+        <ui:Label text="Gold:" display-tooltip-when-elided="True" name="goldLabel" style="position: absolute; top: 21px; left: 233px;" />
+        <ui:Label text="0" display-tooltip-when-elided="True" name="goldValue" style="position: absolute; top: 23px; left: 276px;" />
+        <ui:Label text="Fame:" display-tooltip-when-elided="True" name="fameLabel" style="position: absolute; top: 20px; left: 79px;" />
+        <ui:Label text="0" display-tooltip-when-elided="True" name="fameValue" style="position: absolute; top: 22px; left: 124px;" />
+        <ui:Label text="0" display-tooltip-when-elided="True" name="storageValueOut" style="position: absolute; top: 24px; left: 492px; -unity-font-style: bold; color: rgb(87, 87, 87);" />
+        <ui:Label text="Warehouse:" display-tooltip-when-elided="True" name="WarehouseLabel" style="position: absolute; top: 22px; left: 412px; -unity-font-style: bold; color: rgb(84, 84, 84);" />
+        <ui:VisualElement style="position: absolute; height: 30.4px; width: 35.6px; top: 10px; left: 37px; background-image: url(&apos;/Assets/Images/favoritos.png&apos;);" />
+        <ui:VisualElement style="position: absolute; height: 32.6px; width: 31.8px; top: 10px; left: 368px; background-image: url(&apos;/Assets/Images/almacen (1).png&apos;);" />
     </ui:VisualElement>
     <ui:VisualElement name="factoryPage1" style="height: 889px; width: 1304px; display: none;">
         <Style src="Factory.uss" />
         <ui:VisualElement name="container1" style="position: absolute; height: 454px; width: 832px; background-image: url(&apos;/Assets/DailyRewards/Examples/Sprites/Window.png&apos;); top: 90px; left: 232px;">
             <ui:VisualElement name="closeFactory" style="height: 75px; position: absolute; width: 74px; left: 796px; background-image: url(&apos;/Assets/DailyRewards/Examples/Sprites/buttonClose.png&apos;); top: -33px;" />
-            <ui:VisualElement name="columA1" style="width: 449.6667px; position: absolute; top: 50px; left: 6px; height: 395px; background-image: none; color: rgba(0, 0, 0, 255);">
+            <ui:VisualElement name="columA1" style="width: 449.6667px; position: absolute; top: 50px; left: 6px; height: 395px; background-image: none; color: rgb(0, 0, 0);">
                 <ui:VisualElement name="banner" style="position: absolute; width: 327.8px; height: 95px; top: -107.3333px; left: 267.6667px; background-image: url(&apos;/Assets/DailyRewards/Examples/Sprites/GreenRibbon.png&apos;);">
                     <ui:Label text="Lv 3" display-tooltip-when-elided="True" name="LV" style="position: absolute; top: 21.66667px; left: 232px; -unity-font-style: bold; color: rgb(255, 231, 0); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(255, 157, 0); border-right-color: rgb(255, 157, 0); border-top-color: rgb(255, 157, 0); border-bottom-color: rgb(255, 157, 0); border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;" />
                     <ui:Label text="Factory " display-tooltip-when-elided="true" name="title" style="position: absolute; top: 24.33333px; left: 114.6667px; height: 28.2px; width: 95.8px; font-size: 25px; -unity-font-style: bold-and-italic; color: rgb(255, 255, 255);" />
@@ -122,10 +125,10 @@
                     <ui:Button text="+" display-tooltip-when-elided="True" name="boton" style="position: absolute; top: 18px; left: 162px; height: 38.66667px; width: 47.66667px; font-size: 50px; background-image: url(&apos;/Assets/Images/greenButton.png&apos;);" />
                 </ui:VisualElement>
                 <ui:VisualElement name="Storage" style="height: 102px;">
-                    <ui:Label text="Storage:" display-tooltip-when-elided="false" name="storageLabel" style="position: absolute; top: 14.33333px; left: 72.33334px; color: rgba(0, 0, 0, 255);" />
-                    <ui:Label text="0" display-tooltip-when-elided="True" name="storageValue" style="position: absolute; top: 12px; left: 448.3333px; color: rgba(0, 0, 0, 255);" />
-                    <ui:Label text="Warehouse" display-tooltip-when-elided="false" name="warehouseLabel" style="position: absolute; top: 11.33333px; left: 375.6667px; color: rgba(5, 5, 5, 255);" />
-                    <ui:Label text="0" display-tooltip-when-elided="false" name="storageValIn1" style="position: absolute; top: 15.33333px; left: 129px; color: rgba(0, 0, 0, 255);" />
+                    <ui:Label text="Storage:" display-tooltip-when-elided="false" name="storageLabel" style="position: absolute; top: 14.33333px; left: 72.33334px; color: rgb(0, 0, 0);" />
+                    <ui:Label text="0" display-tooltip-when-elided="True" name="storageValue" style="position: absolute; top: 12px; left: 448.3333px; color: rgb(0, 0, 0);" />
+                    <ui:Label text="Warehouse" display-tooltip-when-elided="false" name="warehouseLabel" style="position: absolute; top: 11.33333px; left: 375.6667px; color: rgb(5, 5, 5);" />
+                    <ui:Label text="0" display-tooltip-when-elided="false" name="storageValIn1" style="position: absolute; top: 15.33333px; left: 129px; color: rgb(0, 0, 0);" />
                 </ui:VisualElement>
                 <ui:Button text="Collect" display-tooltip-when-elided="True" name="collectIn1" style="position: absolute; top: 339px; left: 231px; display: flex;" />
             </ui:VisualElement>
@@ -236,7 +239,7 @@
                 </ui:VisualElement>
                 <ui:VisualElement name="Storage" style="height: 102px;" />
             </ui:VisualElement>
-            <ui:Button display-tooltip-when-elided="True" name="closeFactoryBtn1" style="position: absolute; top: -18px; left: 808.8px; height: 47.4px; width: 48.4px; background-image: none; -unity-background-image-tint-color: rgb(32, 32, 32); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-left-color: rgb(99, 0, 4); border-right-color: rgb(99, 0, 4); border-top-color: rgb(99, 0, 4); border-bottom-color: rgb(99, 0, 4); -unity-font-style: bold; font-size: 20px; color: rgba(255, 255, 255, 255); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-color: rgba(93, 93, 93, 0);" />
+            <ui:Button display-tooltip-when-elided="True" name="closeFactoryBtn1" style="position: absolute; top: -18px; left: 808.8px; height: 47.4px; width: 48.4px; background-image: none; -unity-background-image-tint-color: rgb(32, 32, 32); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-left-color: rgb(99, 0, 4); border-right-color: rgb(99, 0, 4); border-top-color: rgb(99, 0, 4); border-bottom-color: rgb(99, 0, 4); -unity-font-style: bold; font-size: 20px; color: rgb(255, 255, 255); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-color: rgba(93, 93, 93, 0);" />
         </ui:VisualElement>
         <ui:VisualElement name="test" style="display: none;">
             <ui:Label text="DIEGO" name="nombre" />
@@ -247,9 +250,9 @@
         <Style src="Factory.uss" />
         <ui:VisualElement style="height: 282.6667px; background-image: url(&apos;/Assets/Images/factory.png&apos;); width: 333.6667px;" />
         <ui:VisualElement name="Storage" style="position: absolute; height: 80px; width: 127px; top: 5px; left: 200px; background-image: url(&apos;/Assets/DailyRewards/Examples/Sprites/WindowSmall.png&apos;);">
-            <ui:Button text="Collect" display-tooltip-when-elided="True" name="collect1" style="position: absolute; top: 42px; left: 36px; display: flex; background-color: rgba(22, 195, 0, 255); -unity-font-style: bold; color: rgba(255, 255, 255, 255);" />
-            <ui:Label text="Storage:" display-tooltip-when-elided="false" name="storageLabel" style="position: absolute; top: 17px; left: 12px; color: rgba(255, 255, 255, 255); -unity-font-style: bold;" />
-            <ui:Label text="0" display-tooltip-when-elided="false" name="storageValOut1" style="position: absolute; top: 18px; left: 64px; color: rgba(255, 255, 255, 255); -unity-font-style: bold;" />
+            <ui:Button text="Collect" display-tooltip-when-elided="True" name="collect1" style="position: absolute; top: 42px; left: 36px; display: flex; background-color: rgb(22, 195, 0); -unity-font-style: bold; color: rgb(255, 255, 255);" />
+            <ui:Label text="Storage:" display-tooltip-when-elided="false" name="storageLabel" style="position: absolute; top: 17px; left: 12px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+            <ui:Label text="0" display-tooltip-when-elided="false" name="storageValOut1" style="position: absolute; top: 18px; left: 64px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
             <ui:Label text="/200" display-tooltip-when-elided="false" name="storageMaxLabel1" style="position: absolute; top: 18px; left: 89px; color: rgb(255, 255, 255); -unity-font-style: bold;" />
         </ui:VisualElement>
     </ui:VisualElement>
